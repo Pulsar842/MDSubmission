@@ -23,9 +23,11 @@ AddEllipseAtomicArray(8,4,0,0,0,0,0,T,0);
 Ep = 2;
 
 X00 = [3 -3 0 4.5 -4.5];
+X01 = [5 -5];
 %                (num, x0, y0, PartAng, Type, Ep, Seper)
 %AddParticleStream(5, 0.1, 10, -pi / 2, 2, Ep * C.q_0, 5);
 AddParticleStream(5, X00, 10, -pi / 2, 2, Ep * C.q_0, 5);
+AddParticleStream(2, X01, 10, -pi / 2, 1, Ep * C.q_0, 5);
 
 Size = 10*AtomSpacing;
 Limits = [-Size +Size -Size +Size]; % square is good

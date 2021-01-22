@@ -11,14 +11,14 @@ else
 end
 
 L = (2*WWidth - 1) * AtomSpacing;
-W = (2*HHeight - 1) * AtomSpacing;
+W = (2*WWidth - 1) * AtomSpacing;
 
 xp(1, :) = linspace(-L/2, L/2, 2*WWidth);
-yp(1, :) = linspace(-W/2, W/2, 2*HHeight);
+yp(1, :) = linspace(-W/2, W/2, 2*WWidth);
 
 numAtoms = 0;
 for i = 1:2*WWidth
-    for j = 1:2*HHeight
+    for j = 1:2*WWidth
         if xp(i)^2/(WWidth*AtomSpacing)^2 + yp(j)^2/(HHeight*AtomSpacing)^2 <= 1
             numAtoms = numAtoms+1;
             x(nAtoms + numAtoms) = xp(i);
